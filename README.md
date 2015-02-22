@@ -19,7 +19,7 @@ Olof Emanuelsson
 
 ##Group member's diary
 
-Macro:	http://marcosalvatore31.wordpress.com 
+[Macro](http://marcosalvatore31.wordpress.com)
 
-Enrichetta: http://miletienrichettablog.wordpress.com
+[Enrichetta](http://miletienrichettablog.wordpress.com)
 
