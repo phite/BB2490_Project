@@ -15,7 +15,7 @@ Olof Emanuelsson
 
 ##Project diary by Yunzhang Wang
 
-Project diary.md
+[Project diary.md](https://github.com/phite/BB2490_Project/blob/master/Project%20diary.md)
 
 ##Group member's diary
 
