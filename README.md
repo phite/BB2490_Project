@@ -13,7 +13,7 @@ Yunzhang Wang
 ##Supervisor
 Olof Emanuelsson
 
-##project diary by Yunzhang Wang
+##Project diary by Yunzhang Wang
 
 Project diary.md
 
