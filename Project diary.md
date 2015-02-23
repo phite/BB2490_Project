@@ -7,3 +7,10 @@ To discuss project topic, plan and diaries with Enrichetta and Macro
 1st week: go through the CAGE data pipeline
 
 2nd week: start data analysis
+
+-----------------------------
+
+##2015-02-23
+
+Read through data processing pipeline
+[Pipeline.pdf](Z:\Github\BB2490_Project)
