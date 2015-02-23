@@ -12,5 +12,5 @@ To discuss project topic, plan and diaries with Enrichetta and Macro
 
 ##2015-02-23
 
-Read through data processing pipeline
-[Pipeline.pdf](Z:\Github\BB2490_Project)
+Read through data processing pipeline from Enrichetta
+[Pipeline.pdf](https://github.com/phite/BB2490_Project/blob/master/Pipeline.pdf)
