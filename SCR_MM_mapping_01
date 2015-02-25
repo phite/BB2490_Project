@@ -1,0 +1,76 @@
+#! /bin/bash -l
+. /usr/share/Modules/init/sh
+echo 'CAGE mapping pipeline for Uppmax'
+
+
+echo Loading bioinformatics modules
+module load bioinfo-tools 
+module load Fastx 
+module load bowtie
+module list
+
+
+INP_FILE="1CAGE_VRSY_HELA_SPIKE_01P.fastq"
+DIR_DATA="/proj/b2013050/DATA/yeast"
+DIR_OUT="/home/enri/glob/DATA/out/other"
+DIR_BED="/home/enri/glob/DATA/out/bed"
+
+SAMPLE_NAME="1CAGE_VRSY_HELA_SPIKE_01P"
+
+DIR_PHIX='/home/enri/glob/DATA/phix/Phix'
+DIR_HG19='/home/enri/glob/DATA/hg19/hg19'
+DIR_rDNA='/home/enri/glob/DATA/rDNA/humanrDNA'
+DIR_BARCODES='/home/enri/glob/DATA'
+
+echo Description
+echo Mapping against PhiX
+echo Splitting by barcodes, quality filtering and trimming
+echo Mapping against rDNA
+echo Mapping against mm10
+echo IN PROGRESS...
+echo $SAMPLE_NAME
+
+echo Mapping to PhiX
+bowtie -S -t $DIR_PHIX -q $DIR_DATA/$INP_FILE --un $DIR_OUT/$SAMPLE_NAME.unPhiX > $DIR_OUT/$SAMPLE_NAME.PhiX_mapped 
+
+echo Splitting by barcodes
+cat $DIR_OUT/$SAMPLE_NAME.unPhiX | fastx_barcode_splitter.pl --bcfile $DIR_BARCODES/barcodes.txt --bol --mismatches 0 --prefix $DIR_OUT/$SAMPLE_NAME"." --suffix ".txt" > $DIR_OUT/out_barcode.txt
+
+echo Quality filtering
+fastq_quality_filter -Q 33 -q 30 -p 50 -i $DIR_OUT/$SAMPLE_NAME".BC1.txt" > $DIR_OUT/$SAMPLE_NAME".BC1_qfilter"
+fastq_quality_filter -Q 33 -q 30 -p 50 -i $DIR_OUT/$SAMPLE_NAME".BC2.txt" > $DIR_OUT/$SAMPLE_NAME".BC2_qfilter"
+fastq_quality_filter -Q 33 -q 30 -p 50 -i $DIR_OUT/$SAMPLE_NAME".BC3.txt" > $DIR_OUT/$SAMPLE_NAME".BC3_qfilter"
+fastq_quality_filter -Q 33 -q 30 -p 50 -i $DIR_OUT/$SAMPLE_NAME".BC4.txt" > $DIR_OUT/$SAMPLE_NAME".BC4_qfilter"
+
+echo Trimming out linkers and echoP15
+fastx_trimmer -Q33 -f 12 -l 36 -i $DIR_OUT/$SAMPLE_NAME".BC1_qfilter" > $DIR_OUT/$SAMPLE_NAME".BC1_qfilter_trim"
+fastx_trimmer -Q33 -f 12 -l 36 -i $DIR_OUT/$SAMPLE_NAME".BC2_qfilter" > $DIR_OUT/$SAMPLE_NAME".BC2_qfilter_trim"
+fastx_trimmer -Q33 -f 12 -l 36 -i $DIR_OUT/$SAMPLE_NAME".BC3_qfilter" > $DIR_OUT/$SAMPLE_NAME".BC3_qfilter_trim"
+fastx_trimmer -Q33 -f 12 -l 36 -i $DIR_OUT/$SAMPLE_NAME".BC4_qfilter" > $DIR_OUT/$SAMPLE_NAME".BC4_qfilter_trim"
+
+echo Mapping to the rDNA 
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_rDNA -q $DIR_OUT/$SAMPLE_NAME".BC1_qfilter_trim" --un $DIR_OUT/$SAMPLE_NAME".BC1_rDNA_unAl" > $DIR_OUT/$SAMPLE_NAME".BC1_rDNA_mapped"
+
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_rDNA -q $DIR_OUT/$SAMPLE_NAME".BC2_qfilter_trim" --un $DIR_OUT/$SAMPLE_NAME".BC2_rDNA_unAl" > $DIR_OUT/$SAMPLE_NAME".BC2_rDNA_mapped"
+
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_rDNA -q $DIR_OUT/$SAMPLE_NAME".BC3_qfilter_trim" --un $DIR_OUT/$SAMPLE_NAME".BC3_rDNA_unAl" > $DIR_OUT/$SAMPLE_NAME".BC3_rDNA_mapped"
+
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_rDNA -q $DIR_OUT/$SAMPLE_NAME".BC4_qfilter_trim" --un $DIR_OUT/$SAMPLE_NAME".BC4_rDNA_unAl" > $DIR_OUT/$SAMPLE_NAME".BC4_rDNA_mapped"
+
+echo Mapping to the Hg19 reference genome
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_HG19 -q $DIR_OUT/$SAMPLE_NAME".BC1_rDNA_unAl" --un $DIR_OUT/$SAMPLE_NAME".BC1_hg19_unAl" > $DIR_OUT/$SAMPLE_NAME".BC1_hg19_mapped"
+
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_HG19 -q $DIR_OUT/$SAMPLE_NAME".BC2_rDNA_unAl" --un $DIR_OUT/$SAMPLE_NAME".BC2_hg19_unAl" > $DIR_OUT/$SAMPLE_NAME".BC2_hg19_mapped"
+
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_HG19 -q $DIR_OUT/$SAMPLE_NAME".BC3_rDNA_unAl" --un $DIR_OUT/$SAMPLE_NAME".BC3_hg19_unAl" > $DIR_OUT/$SAMPLE_NAME".BC3_hg19_mapped"
+
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_HG19 -q $DIR_OUT/$SAMPLE_NAME".BC4_rDNA_unAl" --un $DIR_OUT/$SAMPLE_NAME".BC4_hg19_unAl" > $DIR_OUT/$SAMPLE_NAME".BC4_hg19_mapped"
+
+echo Mapping to the r64 reference genome
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_r64 -q $DIR_OUT/$SAMPLE_NAME".BC1_rDNA_unAl" --un $DIR_OUT/$SAMPLE_NAME".BC1_hg19_unAl" > $DIR_OUT/$SAMPLE_NAME".BC1_r64_mapped"
+
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_r64 -q $DIR_OUT/$SAMPLE_NAME".BC2_rDNA_unAl" --un $DIR_OUT/$SAMPLE_NAME".BC2_hg19_unAl" > $DIR_OUT/$SAMPLE_NAME".BC2_r64_mapped"
+
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_r64 -q $DIR_OUT/$SAMPLE_NAME".BC3_rDNA_unAl" --un $DIR_OUT/$SAMPLE_NAME".BC3_hg19_unAl" > $DIR_OUT/$SAMPLE_NAME".BC3_r64_mapped"
+
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_r64 -q $DIR_OUT/$SAMPLE_NAME".BC4_rDNA_unAl" --un $DIR_OUT/$SAMPLE_NAME".BC4_hg19_unAl" > $DIR_OUT/$SAMPLE_NAME".BC4_r64_mapped"
