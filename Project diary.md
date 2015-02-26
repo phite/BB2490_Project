@@ -4,9 +4,9 @@ Project Start
 Discuss project topic, plan and diaries with Enrichetta and Macro
 
 ###Project plan
-1st week: go through the CAGE data pipeline
+-  **1st week:**  go through the CAGE data pipeline
 
-2nd week: start data analysis
+-  **2nd week:**  start data analysis
 
 -----------------------------
 
@@ -29,7 +29,7 @@ Get raw data shared from Macro
 
 ##2015-02-25 Wed
 
-Read and change [script](https://BB2490_Project/SCR_MM_mapping_01.sh) written by Enrichetta
+Read and change [script](https://github.com/phite/BB2490_Project/blob/master/SCR_MM_mapping_01.sh) written by Enrichetta
 
 Practise the Data processing using CAGE_01yeast data.
 
