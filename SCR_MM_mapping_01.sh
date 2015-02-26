@@ -18,9 +18,9 @@ DIR_BED="/home/yunzhang/CAGE_project/out/bed"
 SAMPLE_NAME="CAGE_VRSY_HELA_SPIKE_01P"
 
 DIR_PHIX='/home/yunzhang/CAGE_project/phix/phix'
-DIR_HG19='/home/yunzhang/CAGE_project/hg19'
-DIR_r64='/home/yunzhang/CAGE_project/yeast'
-DIR_rDNA='/home/enri/glob/DATA/rDNA/humanrDNA'
+DIR_HG19='/home/yunzhang/CAGE_project/hg19/hg19'
+DIR_r64='/home/yunzhang/CAGE_project/yeast/s_cerevisiae'
+DIR_rDNA='/home/yunzhang/CAGE_project/humanrDNA/humanrDNA'
 DIR_BARCODES='/home/yunzhang/CAGE_project'
 
 echo Description
