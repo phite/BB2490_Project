@@ -1,5 +1,7 @@
 #! /bin/bash 
 
+# -A g2015009 -t 2:00:00 -p node -n 8 -o my_job_name.out
+
 echo 'CAGE mapping pipeline for Uppmax'
 
 
@@ -22,7 +24,8 @@ DIR_HG19='/home/yunzhang/CAGE_project/hg19/hg19'
 DIR_r64='/home/yunzhang/CAGE_project/yeast/s_cerevisiae'
 DIR_rDNA='/home/yunzhang/CAGE_project/humanrDNA/humanrDNA'
 DIR_BARCODES='/home/yunzhang/CAGE_project'
-DIR_blaclist='/home/yunzhang/CAGE_project/black-list/blacklist'
+DIR_human_blacklist='/home/yunzhang/CAGE_project/human_blacklist/human_blacklist'
+DIR_yeast_blacklist='/home/yunzhang/CAGE_project/yeast_blacklist/yeast_blacklist'
 
 echo Description
 echo Mapping against PhiX
@@ -49,13 +52,17 @@ echo Trimming out linkers and echoP15
 fastx_trimmer -Q33 -f 12 -l 36 -i $DIR_OUT/$SAMPLE_NAME".BC3_qfilter" > $DIR_OUT/$SAMPLE_NAME".BC3_qfilter_trim"
 
 
-echo Mapping to the blacklist 
-
-bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -l 25 -e 70 $DIR_blaclist -q $DIR_OUT/$SAMPLE_NAME".BC3_qfilter_trim" --un $DIR_OUT/$SAMPLE_NAME".BC3_BL_unAl" > $DIR_OUT/$SAMPLE_NAME".BC3_BL_mapped"
+echo Mapping to the Human blacklist 
+ 
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -l 25 -e 70 $DIR_human_blacklist -q $DIR_OUT/$SAMPLE_NAME".BC3_qfilter_trim" --un $DIR_OUT/$SAMPLE_NAME".unAl_BC3_human_bl" > $DIR_OUT/$SAMPLE_NAME".BC3_human_bl_mapped"
+ 
+echo Mapping to the Yeast blacklist 
+ 
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -l 25 -e 70 $DIR_yeast_blacklist -q $DIR_OUT/$SAMPLE_NAME".unAl_BC3_human_bl" --un $DIR_OUT/$SAMPLE_NAME".unAl_BC3_yeast_bl" > $DIR_OUT/$SAMPLE_NAME".BC3_yeast_bl_mapped"
 
 echo Mapping to the rDNA 
 
-bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_rDNA -q $DIR_OUT/$SAMPLE_NAME".BC3_BL_unAl" --un $DIR_OUT/$SAMPLE_NAME".BC3_rDNA_unAl" > $DIR_OUT/$SAMPLE_NAME".BC3_rDNA_mapped"
+bowtie -S -t --best -k 1 -y -p 6 --phred33-quals --chunkmbs 64 -n 2 -l 25 -e 70 $DIR_rDNA -q $DIR_OUT/$SAMPLE_NAME".unAl_BC3_yeast_bl" --un $DIR_OUT/$SAMPLE_NAME".BC3_rDNA_unAl" > $DIR_OUT/$SAMPLE_NAME".BC3_rDNA_mapped"
 
 echo Mapping to the Hg19 reference genome
 
