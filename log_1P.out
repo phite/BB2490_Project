@@ -1,0 +1,76 @@
+CAGE mapping pipeline for Uppmax
+Loading bioinformatics modules
+
+Currently Loaded Modules:
+  1) uppmax   2) bioinfo-tools   3) Fastx/0.0.14   4) bowtie/0.12.6
+Description
+Mapping against PhiX
+Splitting by barcodes, quality filtering and trimming
+Mapping against rDNA
+Mapping against mm10
+IN PROGRESS...
+CAGE_VRSY_HELA_SPIKE_1P
+Mapping to PhiX
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Seeded quality full-index search: 00:05:04
+# reads processed: 24589986
+# reads with at least one reported alignment: 0 (0.00%)
+# reads that failed to align: 24589986 (100.00%)
+No alignments
+Time searching: 00:05:07
+Overall time: 00:05:07
+Splitting by barcodes
+Quality filtering
+Trimming out linkers and echoP15
+Mapping to the Human blacklist
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:01
+Warning: Exhausted best-first chunk memory for read HWI-ST575:220:C2MMMACXX:3:2210:7463:50316 1:N:0: (patid 18099494); skipping read
+Seeded quality full-index search: 00:03:42
+# reads processed: 23920274
+# reads with at least one reported alignment: 17037 (0.07%)
+# reads that failed to align: 23903237 (99.93%)
+Reported 17037 alignments to 1 output stream(s)
+Time searching: 00:03:45
+Overall time: 00:03:45
+Mapping to the Yeast blacklist
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Seeded quality full-index search: 00:03:26
+# reads processed: 23903237
+# reads with at least one reported alignment: 1637 (0.01%)
+# reads that failed to align: 23901600 (99.99%)
+Reported 1637 alignments to 1 output stream(s)
+Time searching: 00:03:27
+Overall time: 00:03:27
+Mapping to the rDNA
+Time loading forward index: 00:00:01
+Time loading mirror index: 00:00:00
+Seeded quality full-index search: 00:03:26
+# reads processed: 23901600
+# reads with at least one reported alignment: 1129076 (4.72%)
+# reads that failed to align: 22772524 (95.28%)
+Reported 1129076 alignments to 1 output stream(s)
+Time searching: 00:03:28
+Overall time: 00:03:28
+Mapping to the Hg19 reference genome
+Time loading forward index: 00:00:14
+Time loading mirror index: 00:00:13
+Seeded quality full-index search: 00:05:08
+# reads processed: 22772524
+# reads with at least one reported alignment: 21377775 (93.88%)
+# reads that failed to align: 1394749 (6.12%)
+Reported 21377775 alignments to 1 output stream(s)
+Time searching: 00:05:35
+Overall time: 00:05:35
+Mapping to the r64 reference genome
+Time loading forward index: 00:00:01
+Time loading mirror index: 00:00:00
+Seeded quality full-index search: 00:07:54
+# reads processed: 22772524
+# reads with at least one reported alignment: 213495 (0.94%)
+# reads that failed to align: 22559029 (99.06%)
+Reported 213495 alignments to 1 output stream(s)
+Time searching: 00:07:56
+Overall time: 00:07:56
