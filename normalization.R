@@ -8,7 +8,7 @@ colnames(human) = c("Tag","CAGE01","CAGE1")
 
 summary(human)
 
-     Tag                 0.1%                1%
+       Tag                CAGE01             CAGE1
  Length:37925       Min.   :     0.0   Min.   :     0.0
  Class :character   1st Qu.:    29.0   1st Qu.:    31.0
  Mode  :character   Median :    71.0   Median :    69.0
@@ -16,8 +16,9 @@ summary(human)
                     3rd Qu.:   283.0   3rd Qu.:   266.0
                     Max.   :260101.0   Max.   :290616.0
 
+
 summary(yeast)
-     Tag                 0.1%               1%
+     Tag                CAGE01            CAGE1
  Length:1089        Min.   :   0.00   Min.   :   1.0
  Class :character   1st Qu.:   4.00   1st Qu.:  34.0
  Mode  :character   Median :   7.00   Median :  55.0
