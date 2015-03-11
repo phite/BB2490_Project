@@ -7,20 +7,20 @@ colnames(yeast) = c("CAGE01","CAGE1")
 colnames(human) = c("CAGE01","CAGE1")
 
 # TPM normalization
-result_human <- apply(human,2,function(x){
-	y <- x*10^6/sum(x)
-	return(y)
-})
-result_human <- as.data.frame(result_human)
+
+TPM_normalization <- function(data){
+	result_data <- apply(data,2,function(x){
+		y <- x*10^6/sum(x)
+		return(y)
+	})
+	result_data <- as.data.frame(result_data)
+return(result_data)
+}
+
+result_human <- TPM_normalization(human)
 write.table(result_human,"normalized_TPM_human.bed",sep = "\t",col.names = NA)
-
-result_yeast <- apply(yeast,2,function(x){
-	y <- x*10^6/sum(x)
-	return(y)
-})
-result_yeast <- as.data.frame(result_yeast)
+result_yeast <- TPM_normalization(yeast)
 write.table(result_yeast,"normalized_TPM_yeast.bed",sep = "\t",col.names = NA)
-
 
 # normalization
 CAGE_normalization <- function(yeast,human){
