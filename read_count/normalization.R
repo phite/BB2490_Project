@@ -1,4 +1,4 @@
-setwd("/home/yunzhang/CAGE_project/out/counts/")
+setwd("~/CAGE_project/out/counts/")
 
 # Load data
 yeast = read.table(file = "CAGE_VRSY_HELA_SPIKE_01P_1P_r64_counts.bed",stringsAsFactors=FALSE,row.names=1)
@@ -8,8 +8,8 @@ colnames(human) = c("CAGE01","CAGE1")
 
 # TPM normalization
 
-TPM_normalization <- function(data){
-	result_data <- apply(data,2,function(x){
+TPM_normalization <- function(dat){
+	result_data <- apply(dat,2,function(x){
 		y <- x*10^6/sum(x)
 		return(y)
 	})
