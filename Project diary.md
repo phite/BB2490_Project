@@ -61,13 +61,13 @@ Describe problems and exchange experiences in seminar.
 
 Run preprocessing pipeline for both samples ([script_01P](https://github.com/phite/BB2490_Project/blob/master/pipeline/SCR_MM_mapping_01.sh) and [script_1P](https://github.com/phite/BB2490_Project/blob/master/pipeline/SCR_MM_mapping_1.sh)) using two blacklists.
 
-Results: [log_01P]((https://github.com/phite/BB2490_Project/blob/master/pipeline/log_01P.out) and [log_1P]((https://github.com/phite/BB2490_Project/blob/master/pipeline/log_1P.out)
+Results: [log_01P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_01P.out) and [log_1P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_1P.out)
 
 -------------------------------
 
 ##2015-03-05 Thu
 
-Receive codes for step 2-4 in [pipeline](https://github.com/phite/BB2490_Project/blob/master/Pipeline.doc):
+Receive codes for step 2-4 in the [pipeline](https://github.com/phite/BB2490_Project/blob/master/Pipeline.doc):
 [samToBED](https://github.com/phite/BB2490_Project/blob/master/pipeline/samToBED.sh),
 [bamToCluster_yeast](https://github.com/phite/BB2490_Project/blob/master/pipeline/bamToCluster_yeast.sh),
 [bamToCluster_human](https://github.com/phite/BB2490_Project/blob/master/pipeline/bamToCluster_human.sh) and

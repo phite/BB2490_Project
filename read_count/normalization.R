@@ -45,4 +45,4 @@ return(normalized_human)
 }
 
 result <- CAGE_normalization(result_yeast,result_human)
-write.table(result,"normalized_human.bed")
+write.table(result,"normalized_human.bed",col.names = NA)
