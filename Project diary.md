@@ -97,7 +97,7 @@ Think about a [normalization method](https://github.com/phite/BB2490_Project/blo
 
 Seminar about how to prepare the poster and the poster session.
 
-Discuss normalization methods with Olof and receive and related [article](http://www.nature.com/nbt/journal/v32/n9/full/nbt.2931.html) from him.
+Discuss normalization methods with Olof and receive a related [article](http://www.nature.com/nbt/journal/v32/n9/full/nbt.2931.html) from him.
 
 -------------------------------
 
@@ -133,7 +133,7 @@ Use boxplot of Relative Log Expression (RLE) from R package [AgiMicroRna](http:/
 
 ##2015-03-13 Fri
 
-Study the normalization method used by Marco from R package [DESeq](http://master.bioconductor.org/packages/release/bioc/html/DESeq.html)
+Study the normalization [method](https://github.com/phite/BB2490_Project/blob/master/read_count/marco_normalization.R) used by Marco from R package [DESeq](http://master.bioconductor.org/packages/release/bioc/html/DESeq.html)
 
 -------------------------------
 
@@ -155,7 +155,7 @@ Discuss normalization methods, poster structure and layout.
 
 ##2015-03-18 Wed
 
-Finish evaluating the three methods we used to normalize read count and create boxplots.
+Finish evaluating the three methods (TPM, Marco's and mine) we used to normalize read count and create boxplots.
 
 Meeting with Enrichetta and Macro in SciLifeLab.
 
