@@ -1,9 +1,9 @@
 ##2015-02-20 Fri
 Project Start
 
-Discuss project topic, plan and diaries with Enrichetta and Macro
+Discuss project topic, plan and diaries with Enrichetta and Macro.
 
-Project idea [presentation](https://github.com/phite/BB2490_Project/blob/master/cage_presentation.pdf)
+Project idea [presentation](https://github.com/phite/BB2490_Project/blob/master/cage_presentation.pdf) in seminar.
 
 ###Project plan
 -  **1st week:**  go through the CAGE data pipeline
@@ -18,8 +18,8 @@ Project idea [presentation](https://github.com/phite/BB2490_Project/blob/master/
 
 ##2015-02-23 Mon
 
-Read through data processing pipeline from Enrichetta
-[Pipeline.pdf](https://github.com/phite/BB2490_Project/blob/master/Pipeline.pdf)
+Read through data processing [pipeline](https://github.com/phite/BB2490_Project/blob/master/Pipeline.pdf) from Enrichetta.
+
 
 -------------------------------
 
@@ -57,7 +57,7 @@ Prepare presentation for seminar in 03/03.
 
 Run batch script for CAGE_1yeast data overnight.
 
-Improve and complete the [pipeline](https://github.com/phite/BB2490_Project/blob/master/Pipeline.doc)
+Improve and complete the [pipeline](https://github.com/phite/BB2490_Project/blob/master/Pipeline.doc).
 
 -------------------------------
 
@@ -77,7 +77,7 @@ Receive codes for step 2-4 in the [pipeline](https://github.com/phite/BB2490_Pro
 [samToBED](https://github.com/phite/BB2490_Project/blob/master/pipeline/samToBED.sh),
 [bamToCluster_yeast](https://github.com/phite/BB2490_Project/blob/master/pipeline/bamToCluster_yeast.sh),
 [bamToCluster_human](https://github.com/phite/BB2490_Project/blob/master/pipeline/bamToCluster_human.sh) and
-[bedI](https://github.com/phite/BB2490_Project/blob/master/pipeline/bedI.sh)
+[bedI](https://github.com/phite/BB2490_Project/blob/master/pipeline/bedI.sh).
 
 -------------------------------
 
@@ -105,7 +105,7 @@ Discuss normalization methods with Olof and receive a related [article](http://w
 
 Receive read count result from Enrichetta:
 [human_count](https://github.com/phite/BB2490_Project/blob/master/read_count/CAGE_VRSY_HELA_SPIKE_01P_1P_hg19_counts.bed) and 
-[yeast_count](https://github.com/phite/BB2490_Project/blob/master/read_count/CAGE_VRSY_HELA_SPIKE_01P_1P_r64_counts.bed)
+[yeast_count](https://github.com/phite/BB2490_Project/blob/master/read_count/CAGE_VRSY_HELA_SPIKE_01P_1P_r64_counts.bed).
 
 Perform a quick analysis and try to normalize read counts in R:
 [normalization.R](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization.R)
@@ -116,7 +116,7 @@ Perform a quick analysis and try to normalize read counts in R:
 
 ##2015-03-11 Wed
 
-Receive codes for TPM((Tags Per Million) normalization from Enrichetta. Rearrange and add them in [normalization.R](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization.R).
+Receive [codes](https://github.com/phite/BB2490_Project/blob/master/read_count/TPM_normalization.R) for TPM(Tags Per Million) normalization from Enrichetta. Rearrange and add them in [normalization.R](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization.R).
 
 -------------------------------
 
@@ -133,7 +133,7 @@ Use boxplot of Relative Log Expression (RLE) from R package [AgiMicroRna](http:/
 
 ##2015-03-13 Fri
 
-Study the normalization [method](https://github.com/phite/BB2490_Project/blob/master/read_count/marco_normalization.R) used by Marco from R package [DESeq](http://master.bioconductor.org/packages/release/bioc/html/DESeq.html)
+Study the normalization [method](https://github.com/phite/BB2490_Project/blob/master/read_count/marco_normalization.R) used by Marco from R package [DESeq](http://master.bioconductor.org/packages/release/bioc/html/DESeq.html).
 
 Run pipeline without using blacklist. Results: [log_nobl_01P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_nobl_01P.out) and [log_nobl_1P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_nobl_1P.out)
 
@@ -165,7 +165,7 @@ Meeting with Enrichetta and Macro in SciLifeLab.
 
 Discuss last details in poster.
 
-Complete final version of the [poster](https://github.com/phite/BB2490_Project/blob/master/CAGE-data-analysis-of-HeLa-yeast-spike-in.pdf)
+Complete final version of the [poster](https://github.com/phite/BB2490_Project/blob/master/CAGE-data-analysis-of-HeLa-yeast-spike-in.pdf).
 
 
 
