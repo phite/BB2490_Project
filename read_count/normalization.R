@@ -1,4 +1,4 @@
-setwd("~/Dropbox/CAGE_project/final_counts/")
+setwd("~/CAGE_project/out/counts")
 require(AgiMicroRna)
 require(DESeq)
 
@@ -28,11 +28,11 @@ yeast_cds <- estimateSizeFactors(yeast_cds)
 human_cds <- newCountDataSet(human,conds)
 human_cds <- estimateSizeFactors(human_cds)
 
-sf =  sizeFactors(yeast_cds)
-sf[1]= sf[1]*10
+sf <- sizeFactors(yeast_cds)
+sf[1] <- sf[1]*10
 sizeFactors(human_cds) <- sf
-foo = counts(human_cds, normalized=T)
- foo = as.data.frame(foo,stringsAsFactors = F)
+foo <- counts(human_cds, normalized=T)
+foo <- as.data.frame(foo,stringsAsFactors = F)
 
 
 human_cds <- estimateSizeFactors(human_cds)
@@ -110,8 +110,6 @@ YZ_human <- YZ_normalization(yeast,human)
 YZ_human$CAGE01 = YZ_human$CAGE1 = NULL
 
 write.table(result,"normalized_human.bed",col.names = NA)
-
-
 
 # plot normalization without yeast
 

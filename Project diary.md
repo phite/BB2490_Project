@@ -116,7 +116,7 @@ Perform a quick analysis and try to normalize read counts in R:
 
 ##2015-03-11 Wed
 
-Receive codes for TPM normalization from Enrichetta. Rearrange and add them in [normalization.R](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization.R).
+Receive codes for TPM((Tags Per Million) normalization from Enrichetta. Rearrange and add them in [normalization.R](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization.R).
 
 -------------------------------
 
@@ -124,7 +124,7 @@ Receive codes for TPM normalization from Enrichetta. Rearrange and add them in [
 
 Try R package [TCC](http://master.bioconductor.org/packages/release/bioc/html/TCC.html) to analyse read count.
 
-Try various methods to normalize data.
+Try TPM and my methods to normalize data.
 
 Use boxplot of Relative Log Expression (RLE) from R package [AgiMicroRna](http://www.bioconductor.org/packages/release/bioc/html/AgiMicroRna.html) to evaluate different normalization methods.
 
@@ -134,6 +134,10 @@ Use boxplot of Relative Log Expression (RLE) from R package [AgiMicroRna](http:/
 ##2015-03-13 Fri
 
 Study the normalization [method](https://github.com/phite/BB2490_Project/blob/master/read_count/marco_normalization.R) used by Marco from R package [DESeq](http://master.bioconductor.org/packages/release/bioc/html/DESeq.html)
+
+Run pipeline without using blacklist. Results: [log_nobl_01P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_nobl_01P.out) and [log_nobl_1P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_nobl_1P.out)
+
+Summarize the results and compare them to the ones using blacklist.
 
 -------------------------------
 
@@ -149,7 +153,7 @@ Continue working on poster.
 
 Meeting with Enrichetta and Macro in Karolinska Huddinge.
 
-Discuss normalization methods, poster structure and layout.
+Discuss normalization methods, poster structure, contents and layout.
 
 -------------------------------
 

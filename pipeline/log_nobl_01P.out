@@ -1,0 +1,55 @@
+CAGE mapping pipeline for Uppmax
+Loading bioinformatics modules
+
+Currently Loaded Modules:
+  1) uppmax   2) bioinfo-tools   3) Fastx/0.0.14   4) bowtie/0.12.6
+Description
+Mapping against PhiX
+Splitting by barcodes, quality filtering and trimming
+Mapping against rDNA
+Mapping against mm10
+IN PROGRESS...
+CAGE_VRSY_HELA_SPIKE_01P
+Mapping to PhiX
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Seeded quality full-index search: 00:06:34
+# reads processed: 25263863
+# reads with at least one reported alignment: 0 (0.00%)
+# reads that failed to align: 25263863 (100.00%)
+No alignments
+Time searching: 00:06:40
+Overall time: 00:06:40
+Splitting by barcodes
+Quality filtering
+Trimming out linkers and echoP15
+Mapping to the rDNA
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Seeded quality full-index search: 00:03:32
+# reads processed: 24579170
+# reads with at least one reported alignment: 713780 (2.90%)
+# reads that failed to align: 23865390 (97.10%)
+Reported 713780 alignments to 1 output stream(s)
+Time searching: 00:03:34
+Overall time: 00:03:34
+Mapping to the Hg19 reference genome
+Time loading forward index: 00:00:11
+Time loading mirror index: 00:00:11
+Seeded quality full-index search: 00:04:38
+# reads processed: 23865390
+# reads with at least one reported alignment: 22744651 (95.30%)
+# reads that failed to align: 1120739 (4.70%)
+Reported 22744651 alignments to 1 output stream(s)
+Time searching: 00:05:01
+Overall time: 00:05:01
+Mapping to the r64 reference genome
+Time loading forward index: 00:00:00
+Time loading mirror index: 00:00:00
+Seeded quality full-index search: 00:08:34
+# reads processed: 23865390
+# reads with at least one reported alignment: 69928 (0.29%)
+# reads that failed to align: 23795462 (99.71%)
+Reported 69928 alignments to 1 output stream(s)
+Time searching: 00:08:35
+Overall time: 00:08:35
