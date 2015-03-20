@@ -59,7 +59,7 @@ Prepare presentation for seminar in 03/03.
 
 Run batch script for CAGE 1%yeast data overnight.
 
-Improve and complete the [pipeline](https://github.com/phite/BB2490_Project/blob/master/Pipeline.doc).
+Improve and complete the [pipeline](https://github.com/phite/BB2490_Project/blob/master/Pipeline_fin.pdf).
 
 -------------------------------
 
@@ -77,7 +77,7 @@ Results: [log_01P](https://github.com/phite/BB2490_Project/blob/master/pipeline/
 
 ##2015-03-05 Thu
 
-Receive codes for step 2-4 in the [pipeline](https://github.com/phite/BB2490_Project/blob/master/Pipeline.doc):
+Receive codes for step 2-4 in the [pipeline](https://github.com/phite/BB2490_Project/blob/master/Pipeline_fin.pdf):
 [samToBED](https://github.com/phite/BB2490_Project/blob/master/pipeline/samToBED.sh),
 [bamToCluster_yeast](https://github.com/phite/BB2490_Project/blob/master/pipeline/bamToCluster_yeast.sh),
 [bamToCluster_human](https://github.com/phite/BB2490_Project/blob/master/pipeline/bamToCluster_human.sh) and
@@ -177,5 +177,6 @@ Complete final version of the [poster](https://github.com/phite/BB2490_Project/b
 
 Poster session in SciLifeLab.
 
+General [Q&A](https://github.com/phite/BB2490_Project/blob/master/Q&A.pdf) made by Enrichetta
 
  
