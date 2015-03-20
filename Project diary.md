@@ -25,6 +25,8 @@ Read through data processing [pipeline](https://github.com/phite/BB2490_Project/
 
 ##2015-02-24 Tue
 
+Meeting with Enrichetta and Macro in SciLifeLab
+
 Get more detailed information about data processing part of pipeline.
 
 An additional step: map reads to a black list which contains identical sequence of human and yeast genome.
@@ -55,7 +57,7 @@ Receive codes [chop](https://github.com/phite/BB2490_Project/blob/master/pipelin
 
 Prepare presentation for seminar in 03/03.
 
-Run batch script for CAGE_1yeast data overnight.
+Run batch script for CAGE 1%yeast data overnight.
 
 Improve and complete the [pipeline](https://github.com/phite/BB2490_Project/blob/master/Pipeline.doc).
 
@@ -63,9 +65,11 @@ Improve and complete the [pipeline](https://github.com/phite/BB2490_Project/blob
 
 ##2015-03-03 Tue
 
+Macro and Enrichetta successfully create the blacklist.
+
 Describe problems and exchange experiences in seminar. [Presentation](https://github.com/phite/BB2490_Project/blob/master/CAGE_presentation_3.3.pdf)
 
-Run preprocessing pipeline for both samples ([script_01P](https://github.com/phite/BB2490_Project/blob/master/pipeline/SCR_MM_mapping_01.sh) and [script_1P](https://github.com/phite/BB2490_Project/blob/master/pipeline/SCR_MM_mapping_1.sh)) using two blacklists.
+Run preprocessing pipeline for both samples ([script_01P](https://github.com/phite/BB2490_Project/blob/master/pipeline/SCR_MM_mapping_01.sh) and [script_1P](https://github.com/phite/BB2490_Project/blob/master/pipeline/SCR_MM_mapping_1.sh)) using the blacklist.
 
 Results: [log_01P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_01P.out) and [log_1P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_1P.out)
 
@@ -85,7 +89,7 @@ Receive codes for step 2-4 in the [pipeline](https://github.com/phite/BB2490_Pro
 
 Meeting with Enrichetta and Marco in SciLifeLab.
 
-We discussed the small difference in results after running preprocessing.
+We discussed the small difference in results of mine and Marco's after running preprocessing.
 
 Also, we try to figure out a method to normalize human read counts according to the dynamic range of yeast read counts.
 
@@ -93,7 +97,7 @@ Also, we try to figure out a method to normalize human read counts according to 
 
 ##2015-03-09 Mon
 
-Think about a [normalization method](https://github.com/phite/BB2490_Project/blob/master/read_count/Normalization_Yunzhang.docx) using mean of logarithm of yeast read counts to adjust human counts.
+Think about a [normalization method](https://github.com/phite/BB2490_Project/blob/master/read_count/Normalization_Yunzhang.pdf) using mean of logarithm of yeast read counts to adjust human counts.
 
 Seminar about how to prepare the poster and the poster session.
 
@@ -107,7 +111,7 @@ Receive read count result from Enrichetta:
 [human_count](https://github.com/phite/BB2490_Project/blob/master/read_count/CAGE_VRSY_HELA_SPIKE_01P_1P_hg19_counts.bed) and 
 [yeast_count](https://github.com/phite/BB2490_Project/blob/master/read_count/CAGE_VRSY_HELA_SPIKE_01P_1P_r64_counts.bed).
 
-Perform a quick analysis and try to normalize read counts in R:
+Perform a quick analysis and try to use my method to normalize read counts in R:
 [normalization.R](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization.R)
 
 [Result](https://github.com/phite/BB2490_Project/blob/master/read_count/normalized_human.bed)
@@ -122,7 +126,7 @@ Receive [codes](https://github.com/phite/BB2490_Project/blob/master/read_count/T
 
 ##2015-03-12 Thu
 
-Try R package [TCC](http://master.bioconductor.org/packages/release/bioc/html/TCC.html) to analyse read count.
+Try R package [TCC](http://master.bioconductor.org/packages/release/bioc/html/TCC.html)(Tag Count Comparison) to analyse read count.
 
 Try TPM and my methods to normalize data.
 
@@ -137,7 +141,7 @@ Study the normalization [method](https://github.com/phite/BB2490_Project/blob/ma
 
 Run pipeline without using blacklist. Results: [log_nobl_01P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_nobl_01P.out) and [log_nobl_1P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_nobl_1P.out)
 
-Summarize the results and compare them to the ones using blacklist.
+Summarize the results and compare them to the ones using blacklist: [Summarized result for preprocessing](https://github.com/phite/BB2490_Project/blob/master/pipeline/preprocessing.xlsx)
 
 -------------------------------
 
@@ -167,7 +171,11 @@ Discuss last details in poster.
 
 Complete final version of the [poster](https://github.com/phite/BB2490_Project/blob/master/CAGE-data-analysis-of-HeLa-yeast-spike-in.pdf).
 
+-------------------------------
 
+##2015-03-20 Fri
+
+Poster session in SciLifeLab.
 
 
  
