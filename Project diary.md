@@ -25,7 +25,7 @@ Read through data processing [pipeline](https://github.com/phite/BB2490_Project/
 
 ##2015-02-24 Tue
 
-Meeting with Enrichetta and Macro in SciLifeLab
+Meeting with Enrichetta and Macro in SciLifeLab.
 
 Get more detailed information about data processing part of pipeline.
 
@@ -38,6 +38,7 @@ Get raw data shared from Macro.
 ##2015-02-25 Wed
 
 Read, edit and correct errors in [script](https://github.com/phite/BB2490_Project/blob/master/pipeline/SCR_MM_mapping_01.sh) written by Enrichetta.
+See [commit](https://github.com/phite/BB2490_Project/commit/98de046a264ec075602c83965f3d6ca62e62573d)
 
 Practice the Data processing of CAGE_01yeast data using shell commands.
 
@@ -50,6 +51,7 @@ Meeting with Enrichetta and Marco in SciLifeLab.
 Discuss problems of running script and creating blacklist.
 
 Receive codes [chop](https://github.com/phite/BB2490_Project/blob/master/pipeline/chop_seq.py) and [merge](https://github.com/phite/BB2490_Project/blob/master/pipeline/merge.py) from Marco, which are used for creating blacklist.
+See [Enrichetta's repository 1st_Phase](https://github.com/EnrichettaMileti/BB2490_project/tree/master/1st_Phase_Cross-mapping) for comprehensive information.
 
 -------------------------------
 
@@ -112,7 +114,7 @@ Receive read count result from Enrichetta:
 [yeast_count](https://github.com/phite/BB2490_Project/blob/master/read_count/CAGE_VRSY_HELA_SPIKE_01P_1P_r64_counts.bed).
 
 Perform a quick analysis and try to use my method to normalize read counts in R:
-[normalization.R](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization.R)
+[normalization.R](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization.R). See [commit](https://github.com/phite/BB2490_Project/blob/18c7af191e2b587e922e0248b42ab08ba589251d/normalization.R)
 
 [Result](https://github.com/phite/BB2490_Project/blob/master/read_count/normalized_human.bed)
 
@@ -126,22 +128,24 @@ Receive [codes](https://github.com/phite/BB2490_Project/blob/master/read_count/T
 
 ##2015-03-12 Thu
 
-Try R package [TCC](http://master.bioconductor.org/packages/release/bioc/html/TCC.html)(Tag Count Comparison) to analyse read count.
+Try R package [TCC](http://master.bioconductor.org/packages/release/bioc/html/TCC.html)(Tag Count Comparison) to analyse read count. It doesn't work well without replicates.
 
-Try TPM and my methods to normalize data.
+Try TPM and my methods to normalize data and estimate their performances.
 
-Use boxplot of Relative Log Expression (RLE) from R package [AgiMicroRna](http://www.bioconductor.org/packages/release/bioc/html/AgiMicroRna.html) to evaluate different normalization methods.
+Use [boxplot of Relative Log Expression (RLE)](http://artax.karlin.mff.cuni.cz/r-help/library/AgiMicroRna/html/RleMicroRna.html) from R package [AgiMicroRna](http://www.bioconductor.org/packages/release/bioc/html/AgiMicroRna.html) to evaluate different normalization methods.
 
 
 -------------------------------
 
 ##2015-03-13 Fri
 
-Study the normalization [method](https://github.com/phite/BB2490_Project/blob/master/read_count/marco_normalization.R) used by Marco from R package [DESeq](http://master.bioconductor.org/packages/release/bioc/html/DESeq.html).
+Study the [normalization method](https://github.com/phite/BB2490_Project/blob/master/read_count/marco_normalization.R) used by Marco from R package [DESeq](http://master.bioconductor.org/packages/release/bioc/html/DESeq.html). 
+Include it in [normalization.R](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization.R).
+See [commit](https://github.com/phite/BB2490_Project/blob/ce14778df1e3d07c99466937ca26a4caa743eaf8/read_count/normalization.R).
 
-Run pipeline without using blacklist. Results: [log_nobl_01P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_nobl_01P.out) and [log_nobl_1P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_nobl_1P.out)
+Run pipeline without using blacklist. Results: [log_nobl_01P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_nobl_01P.out) and [log_nobl_1P](https://github.com/phite/BB2490_Project/blob/master/pipeline/log_nobl_1P.out).
 
-Summarize the results and compare them to the ones using blacklist: [Summarized result for preprocessing](https://github.com/phite/BB2490_Project/blob/master/pipeline/preprocessing.xlsx)
+Summarize the results and compare them to the ones using blacklist: [Summarized result for preprocessing](https://github.com/phite/BB2490_Project/blob/master/pipeline/preprocessing.xlsx). Also shown in [Histogram](https://github.com/phite/BB2490_Project/blob/master/pipeline/Rplot03.png) made by Enrichetta.
 
 -------------------------------
 
@@ -163,7 +167,7 @@ Discuss normalization methods, poster structure, contents and layout.
 
 ##2015-03-18 Wed
 
-Finish evaluating the three methods (TPM, Marco's and mine) we used to normalize read count and create boxplots.
+Finish evaluating the three methods (TPM, Marco's and mine) we used to normalize read count and create boxplots [normalization_without_yeast](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization_without_yeast.png) and [normalization_with_yeast](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization_with_yeast.png).
 
 Meeting with Enrichetta and Macro in SciLifeLab.
 
@@ -179,4 +183,3 @@ Poster session in SciLifeLab.
 
 General [Q&A](https://github.com/phite/BB2490_Project/blob/master/Q&A.pdf) made by Enrichetta
 
- 
