@@ -57,7 +57,7 @@ See [Enrichetta's repository 1st_Phase](https://github.com/EnrichettaMileti/BB24
 
 ##2015-03-01 Sun
 
-Prepare presentation for seminar in 03/03.
+Prepare slide for seminar in 03/03.
 
 Run batch script for CAGE 1%yeast data overnight.
 
@@ -69,7 +69,7 @@ Improve and complete the [pipeline](https://github.com/phite/BB2490_Project/blob
 
 Macro and Enrichetta successfully create the blacklist.
 
-Describe problems and exchange experiences in seminar. [Presentation](https://github.com/phite/BB2490_Project/blob/master/CAGE_presentation_3.3.pdf)
+Describe problems and exchange experiences in seminar. [Presentation slide](https://github.com/phite/BB2490_Project/blob/master/CAGE_presentation_3.3.pdf)
 
 Run preprocessing pipeline for both samples ([script_01P](https://github.com/phite/BB2490_Project/blob/master/pipeline/SCR_MM_mapping_01.sh) and [script_1P](https://github.com/phite/BB2490_Project/blob/master/pipeline/SCR_MM_mapping_1.sh)) using the blacklist.
 
@@ -114,7 +114,7 @@ Receive read count result from Enrichetta:
 [yeast_count](https://github.com/phite/BB2490_Project/blob/master/read_count/CAGE_VRSY_HELA_SPIKE_01P_1P_r64_counts.bed).
 
 Perform a quick analysis and try to use my method to normalize read counts in R:
-[normalization.R](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization.R). See [commit](https://github.com/phite/BB2490_Project/blob/18c7af191e2b587e922e0248b42ab08ba589251d/normalization.R)
+[normalization.R](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization.R). See [commit](https://github.com/phite/BB2490_Project/blob/18c7af191e2b587e922e0248b42ab08ba589251d/normalization.R).
 
 [Result](https://github.com/phite/BB2490_Project/blob/master/read_count/normalized_human.bed)
 
@@ -122,7 +122,7 @@ Perform a quick analysis and try to use my method to normalize read counts in R:
 
 ##2015-03-11 Wed
 
-Receive [codes](https://github.com/phite/BB2490_Project/blob/master/read_count/TPM_normalization.R) for TPM(Tags Per Million) normalization from Enrichetta. Rearrange and add them in [normalization.R](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization.R).
+Receive [codes](https://github.com/phite/BB2490_Project/blob/master/read_count/TPM_normalization.R) for TPM(Tags Per Million) normalization from Enrichetta. Rearrange and add them in [normalization.R](https://github.com/phite/BB2490_Project/blob/master/read_count/normalization.R). See [commit](https://github.com/phite/BB2490_Project/commit/973904ae3137c0de905e57239b5b143aa7a4d7a9).
 
 -------------------------------
 
